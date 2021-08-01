@@ -1,27 +1,21 @@
 # MeanPosts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This project uses Angular and Node.js to make a posts management app. Users have to create account/login inorder manage posts.  
+As a prerequisite, have node.js installed; as well as a database cluster from [Mongodb Atlas](https://www.mongodb.com/cloud/atlas). Take the connection string from the cluster and paste as environment variable in the config.env file. (See environment variable below)
 
-## Development server
+## Installation
+After cloning the project, On the root directory, run `npm i`   
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Environment Variable**  
+Navigate to backend/config, create a file config.env and assign the following variables:
+* DB_CONN_URI = connection_string_from_atlas
+* JWT_KEY = secret_key_for_signing_jwt_tokens
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Angular server
 
-## Build
+Run `ng serve` on the root directory for a angular server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Backend server
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `npm run dev` on the root directory to launch the development node server.
